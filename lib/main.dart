@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:finalboss/third.dart';
 import 'package:provider/provider.dart'; // <--- ADD THIS LINE
-import 'third.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
