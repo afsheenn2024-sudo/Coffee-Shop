@@ -30,10 +30,6 @@ class CoffeeIntroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // We no longer need these manual variables:
-    // final double screenHeight = MediaQuery.of(context).size.height;
-    // final double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
