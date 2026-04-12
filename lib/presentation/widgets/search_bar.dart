@@ -28,7 +28,7 @@ class CustomSearchBar extends StatelessWidget {
             const Expanded(
               child: TextField(
                 // Text user types should be white
-                style: TextStyle(color: Colors.white, fontSize: 14),
+                style: TextStyle(color: Colors.black, fontSize: 14),
                 decoration: InputDecoration(
                   hintText: 'Search coffee',
                   hintStyle: TextStyle(
