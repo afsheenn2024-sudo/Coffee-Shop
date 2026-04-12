@@ -7,45 +7,58 @@ class CustomSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      // Figma Left/Right padding: 25-30px
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Container(
         height: 52,
         decoration: BoxDecoration(
-          color: const Color(0xFFFFFFFF),
+          color: const Color(0xFFFFFFFF), // Figma search background is dark
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
           children: [
             const SizedBox(width: 15),
-            const Icon(Icons.search, color: Colors.black, size: 24),
+            // Updated to use the correct Figma Search Icon color
+            Image.asset(
+              "asset/icons/search-normal.png", // Or use Icons.search
+              width: 20,
+              height: 20,
+              color: Colors.black,
+            ),
             const Expanded(
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                // Text user types should be white
+                style: TextStyle(color: Colors.white, fontSize: 14),
                 decoration: InputDecoration(
                   hintText: 'Search coffee',
-                  hintStyle: TextStyle(color: Color(0xFF989898), fontSize: 14),
+                  hintStyle: TextStyle(
+                    color: Color(0xFF989898),
+                    fontSize: 14,
+                    fontFamily: 'Sora',
+                  ),
                   border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 12),
                 ),
               ),
             ),
-        Container(
-          margin: const EdgeInsets.all(4),
-          height: 44,
-          width: 44,
-          decoration: BoxDecoration(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0), // Adjust padding to scale the icon
-            child: Image.asset(
-              "asset/icons/setting-4.png", // Make sure this path matches your pubspec.yaml
-              color: Colors.white,
-              fit: BoxFit.contain,
+            // The Filter Icon (setting-4.png)
+            Container(
+              margin: const EdgeInsets.all(4),
+              height: 44,
+              width: 44,
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image.asset(
+                  "asset/icons/setting-4.png",
+                  color: Colors.white,
+                  fit: BoxFit.contain,
+                ),
+              ),
             ),
-          ),
-        ),
           ],
         ),
       ),
