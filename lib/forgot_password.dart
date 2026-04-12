@@ -14,7 +14,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              // Back Button
+
               InkWell(
                 onTap: () => Navigator.pop(context),
                 child: Row(
