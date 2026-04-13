@@ -1,3 +1,4 @@
+import 'package:finalboss/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:finalboss/size_ext.dart';
@@ -121,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const HomePage(),
                             ),
                           );
                         },
